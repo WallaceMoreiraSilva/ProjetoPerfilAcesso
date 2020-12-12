@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Microsoft.AspNetCore.Identity;
+using ProjetoPerfilAcesso.Models;
 
 namespace ProjetoPerfilAcesso.Data
 {
@@ -12,5 +11,9 @@ namespace ProjetoPerfilAcesso.Data
             : base(options)
         {
         }
+        public DbSet<TipoUsuario> TipoUsuario { get; set; }
+        public DbSet<AcessoTipoUsuario> AcessoTipoUsuario { get; set; }
+        public DbSet<PerfilUsuario> PerfilUsuario { get; set; }
+        public DbSet<IdentityUser> Usuario { get; set; }
     }
 }
